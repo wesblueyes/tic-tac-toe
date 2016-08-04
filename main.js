@@ -26,7 +26,8 @@ const play = (row, col) => { // play function where we pass in a row, a column a
   if (state[row][col] === 0) {
     state[row][col] = playerTurn
     if (checkForWinner()) {
-      console.log(playerTurn, 'wins!')
+      console.log(playerTurn, 'You won!')
+      document.querySelector('.message').textContent = `Congratulations! ${cellValues[playerTurn]} won!` 
     }
   }
   playerTurn = playerTurn === X ? O : X
